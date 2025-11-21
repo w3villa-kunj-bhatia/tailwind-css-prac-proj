@@ -1,16 +1,69 @@
-# React + Vite
+# Tailwind CSS Practice Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal setup using **Vite** and **Tailwind CSS (v4)**.  
+This project is meant for practicing Tailwind utilities, custom layers, theming, and small UI components.
 
-Currently, two official plugins are available:
+## Features
+- Vite development server with fast hot-reload
+- Tailwind CSS v4
+- Custom `@theme`, `@layer`, and `@apply` usage
+- Responsive utilities and dark mode examples
+- Clean project structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Requirements
+- Node.js 16+
+- npm / yarn / pnpm
 
-## React Compiler
+## Installation
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```bash
+npm install
+```
 
-## Expanding the ESLint configuration
+## Running the Dev Server
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm run dev
+```
+
+Then visit:
+
+```
+http://localhost:5173
+```
+
+## Project Structure
+
+```
+project/
+│── index.html
+│── vite.config.js
+│── postcss.config.mjs
+│── tailwind.config.cjs
+└── src/
+    ├── index.css       # Tailwind + custom CSS
+    └── main.js         # Entry file (if required)
+```
+
+## How Tailwind Works Here
+- `@import "tailwindcss";` loads the Tailwind engine.
+- Custom styling uses:
+  - `@theme` for custom variables (e.g., colors)
+  - `@layer base` for global element styles
+  - `@layer components` for reusable UI blocks
+- All HTML/CSS/JS inside the `content` paths in `tailwind.config.cjs` is scanned so unused classes get removed automatically.
+
+## VS Code Notes
+If you see warnings like `Unknown at rule @apply` or `@theme`, update `.vscode/settings.json`:
+
+```json
+"css.lint.unknownAtRules": "ignore"
+```
+
+This prevents the CSS language server from flagging Tailwind-specific rules.
+
+## Build
+
+```bash
+npm run build
+```

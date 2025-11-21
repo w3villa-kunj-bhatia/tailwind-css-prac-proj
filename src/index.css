@@ -8,7 +8,6 @@ body {
   background-color: #10172a;
 }
 
-/* base layer */
 @layer base {
   h3 {
     @apply text-base font-medium tracking-tight text-slate-900 dark:text-white;
@@ -19,7 +18,6 @@ body {
   }
 }
 
-/* components */
 @layer components {
   .card {
     @apply m-2 items-center rounded-lg bg-white px-6 py-8 shadow-2xl ring-1 ring-slate-950/10 dark:bg-[#10172a];
