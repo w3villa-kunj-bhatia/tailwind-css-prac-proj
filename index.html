@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Vite + Tailwind test</title>
+    <link rel="stylesheet" href="/src/index.css" />
+  </head>
+  <body class="bg-[#0f1422] text-white">
+    <div class="my-4 flex h-10 w-full items-center justify-center rounded-md border-2 border-violet-600 bg-violet-200 p-2">
+      <h1 class="text-center font-mono font-extrabold text-violet-900">Hello World</h1>
+    </div>
+
+    <div class="mx-2 mt-10 mb-4 flex items-center justify-center gap-2">
+      <div class="h-16 w-16 rounded-full bg-blue-500"></div>
+      <div class="h-16 w-16 rounded-full bg-orange-500"></div>
+      <div class="h-16 w-16 rounded-full bg-green-500"></div>
+    </div>
+
+    <div class="m-20 mb-0 grid grid-cols-3 gap-2">
+      <div class="h-16 rounded-full bg-blue-500"></div>
+      <div class="h-16 rounded-full bg-orange-500"></div>
+      <div class="h-16 rounded-full bg-green-500"></div>
+    </div>
+
+    <div class="sm:bg-amber-500 md:bg-amber-700 m-20 mb-0">
+      <p class="ml-2 text-white">I appear on screens wider than 768px</p>
+    </div>
+
+    <div class="mt-5 m-20 bg-white text-black dark:bg-black dark:text-white">
+      <h2 class="ml-2">Dark Mode Enabled!</h2>
+    </div>
+
+    <div class="card">
+      <label class="cursor-pointer">
+        <input type="checkbox" class="peer hidden" />
+
+        <div class="w-80 rounded-xl bg-black p-6 text-white transition peer-checked:bg-white peer-checked:text-black m-auto">
+          <h2 class="text-xl font-semibold">Writes Upside-Down</h2>
+
+          <p class="mb-6">The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.</p>
+
+          <div class="rounded-lg bg-blue-200 px-4 py-2 text-black transition peer-checked:bg-blue-600 peer-checked:text-white">Toggle Dark Mode</div>
+        </div>
+      </label>
+    </div>
+
+    <div>
+      <p class="bg-stone-100 p-2 font-bold text-chestnut m-20 mb-0">Chestnut Color + More Styles</p>
+    </div>
+
+    <div class="my-4 ml-2 flex flex-col text-white">
+      <label><input type="checkbox" class="ml-20 mt-20"/> Browser Default</label>
+      <label><input type="checkbox" class="accent-pink-500 ml-20" checked /> Customised</label>
+    </div>
+
+    <p class="p-2 text-[min(10vw,70px)] m-20">Something Fluid</p>
+
+    <div class="m-20">
+      <label class="my-4 block">
+        <input type="file" class="block w-full p-2 text-sm text-slate-500 file:mr-4 file:rounded-full file:border-0 file:bg-violet-50 file:px-4 file:py-2 file:text-sm file:font-semibold file:text-violet-700 hover:file:bg-violet-100" />
+      </label>
+    </div>
+
+    <div class="p-2 selection:bg-green-400 selection:text-white m-20">
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Neque, esse laudantium? Nesciunt doloremque nihil delectus, ipsa quam possimus assumenda laudantium quas molestiae ratione deserunt in aliquam ab minus veniam aliquid vel alias tenetur corporis animi cum voluptatem voluptates. Commodi quae minima enim animi porro illo quod modi sequi nesciunt repellat.</p>
+    </div>
+
+    <div class="ml-50 mr-50 mb-50 mt-20">
+      <textarea class="mt-4 w-full p-2 text-white caret-green-600 border" placeholder="Type something here..."></textarea>
+    </div>
+  </body>
+</html>
